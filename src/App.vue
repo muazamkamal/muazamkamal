@@ -6,7 +6,7 @@
 
 <style>
 /* @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed"); */
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
 html {
   margin: 0;

@@ -8,10 +8,12 @@
           <a href="https://last.fm/muazamkamal" class="lastfm">🎧</a>
           <a href="https://twitch.tv/muazamkamal" class="twitch">🎮</a>
           <a href="https://youtube.com/muazamkamal" class="yt">🎬</a>
-          <br>
+          <br />
         </div>
         <p class="tag">enthusiast.</p>
-        <a href="mailto:contact@muazamkamal.com" class="email">contact@muazamkamal.com</a>
+        <a href="mailto:contact@muazamkamal.com" class="email"
+          >contact@muazamkamal.com</a
+        >
       </div>
     </Center>
   </div>
@@ -36,14 +38,16 @@ export default {
 </script>
 
 <style scoped>
-a, a:visited {
+a,
+a:visited {
   color: inherit;
   text-decoration: none;
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
   text-decoration: none;
-  color: rgb(14, 124, 89)
+  color: rgb(14, 124, 89);
 }
 
 .links {
@@ -56,7 +60,8 @@ a:hover, a:active {
   justify-content: center;
 }
 
-.links a:hover, .links a:active {
+.links a:hover,
+.links a:active {
   color: white;
   font-size: 1.5em;
 }
