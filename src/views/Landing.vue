@@ -73,7 +73,7 @@ a:active {
 }
 
 .email {
-  font-size: 22px;
+  font-size: 24px;
   font-style: italic;
 }
 </style>
