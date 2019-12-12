@@ -6,6 +6,6 @@
 
 <style scoped>
 h1 {
-  font-weight: 300;
+  font-weight: 200;
 }
 </style>

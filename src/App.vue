@@ -20,7 +20,7 @@ html {
 }
 
 #app {
-  font-family: "Lato Light", sans-serif;
+  font-family: "Lato Thin", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

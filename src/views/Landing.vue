@@ -68,7 +68,7 @@ a:active {
 
 .tag {
   font-size: 28px;
-  opacity: 40%;
+  color: rgb(98, 98, 98);
   letter-spacing: 0.3em;
 }
 
