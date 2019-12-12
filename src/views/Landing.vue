@@ -91,7 +91,5 @@ a:active {
   .email {
     font-size: 1em;
   }
-
-
 }
 </style>
