@@ -67,13 +67,31 @@ a:active {
 }
 
 .tag {
-  font-size: 28px;
+  font-size: 1.75em;
   color: rgb(98, 98, 98);
   letter-spacing: 0.3em;
+  font-weight: 100;
 }
 
 .email {
   font-size: 24px;
   font-style: italic;
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 600px) {
+  .links {
+    font-size: 1.25em;
+  }
+
+  .tag {
+    font-size: 1.25em;
+  }
+
+  .email {
+    font-size: 1em;
+  }
+
+
 }
 </style>
