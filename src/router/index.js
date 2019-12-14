@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Landing from "../views/Landing.vue";
+import Landing from "@/views/Landing.vue";
 
 Vue.use(VueRouter);
 
@@ -16,8 +16,17 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Gears.vue")
+    component: () => import(/* webpackChunkName: "about" */ "@/views/Gears.vue")
+  },
+  {
+    path: "/404",
+    name: "notfound",
+    alias: "*",
+    component: () => import("@/views/NotFound.vue")
+  },
+  {
+    path: "*",
+    redirect: "/404"
   }
 ];
 
