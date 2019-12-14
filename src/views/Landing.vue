@@ -5,7 +5,7 @@
       <div class="sub">
         <div class="links">
           <a href="https://instagram.com/muazamkamal" class="ig">⌨</a>
-          <a href="https://last.fm/muazamkamal" class="lastfm">🎧</a>
+          <a href="https://last.fm/user/muazamkamal" class="lastfm">🎧</a>
           <a href="https://twitch.tv/muazamkamal" class="twitch">🎮</a>
           <a href="https://youtube.com/muazamkamal" class="yt">🎬</a>
           <br />
