@@ -10,15 +10,15 @@
 import Center from "@/components/Center.vue";
 
 export default {
-    name: "NotFound",
-    components: {
-        Center
-    }
+  name: "NotFound",
+  components: {
+    Center
+  }
 };
 </script>
 
 <style scoped>
 h1 {
-    font-weight: 200;
+  font-weight: 200;
 }
-</style>>
+</style>

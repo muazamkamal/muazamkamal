@@ -19,6 +19,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ "@/views/Gears.vue")
   },
   {
+    path: "/discord",
+    name: "discord",
+    component: () => import("@/views/Discord.vue")
+  },
+  {
     path: "/404",
     name: "notfound",
     alias: "*",
