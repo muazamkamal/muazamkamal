@@ -48,12 +48,14 @@
   flex: 2;
 }
 
-.box:active > .extra {
-  visibility: visible;
+.extra {
+  /* visibility: hidden; */
+  display: none;
 }
 
-.extra {
-  visibility: hidden;
+.box:active > .extra {
+  /* visibility: visible; */
+  display: inline;
 }
 
 .cpu:hover {
