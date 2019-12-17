@@ -23,6 +23,18 @@ body {
   margin: 0;
 }
 
+a,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+  color: rgb(14, 124, 89);
+}
+
 #app {
   font-family: "Lato Thin", sans-serif;
   -webkit-font-smoothing: antialiased;
