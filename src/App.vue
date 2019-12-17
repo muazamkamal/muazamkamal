@@ -19,6 +19,10 @@ html {
   color: rgb(253, 253, 253);
 }
 
+body {
+  margin: 0;
+}
+
 #app {
   font-family: "Lato Thin", sans-serif;
   -webkit-font-smoothing: antialiased;

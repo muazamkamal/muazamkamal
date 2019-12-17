@@ -1,25 +1,67 @@
 <template>
   <div class="gears">
-    <Center>
-      <component :is="child_component"></component>
-    </Center>
+    <div class="box cpu">
+      <h1>CPU</h1>
+      <div class="extra">
+        Ryzen 5 3600
+      </div>
+    </div>
+    <div class="box gpu">
+      <h1>GPU</h1>
+      <div class="extra">
+        NVIDIA RTX 2060 6GB
+      </div>
+    </div>
+    <div class="box ram">
+      <h1>RAM</h1>
+      <div class="extra">
+        2 x 8GB GALAX Gamer II RGB Memory
+      </div>
+    </div>
+    <div class="box audio">
+      <h1>AUDIO</h1>
+      <div class="extra">
+        Focusrite Scarlett 2i2 Gen 2
+      </div>
+    </div>
   </div>
 </template>
 
-<script>
-import Center from "@/components/Center.vue";
-import GearsComp from "@/components/GearsComp.vue";
+<style scoped>
+.gears {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  height: 100vh;
+}
 
-export default {
-  name: "Gears",
-  components: {
-    Center,
-    GearsComp
-  },
-  data() {
-    return {
-      child_component: "GearsComp"
-    };
-  }
-};
-</script>
+.box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:active {
+  flex: 2;
+}
+
+.box:active > .extra {
+  visibility: visible;
+}
+
+.extra {
+  visibility: hidden;
+}
+
+.cpu:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.gpu:hover {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+
+</style>
