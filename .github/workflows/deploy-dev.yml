@@ -23,6 +23,6 @@ jobs:
         git remote add origin https://muazamkamal:${{ secrets.GH_TOKEN }}@github.com/muazamkamal/muazamkamal-dev.git
         git fetch
         git add -A
+        git pull origin master --allow-unrelated-histories --no-commit
         git commit -m "Deploy from https://github.com/muazamkamal/muazamkamal/commit/$GITHUB_SHA"
-        git pull origin master
         git push origin master
