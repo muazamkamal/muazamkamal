@@ -1,6 +1,6 @@
 <template>
   <div class="gears">
-    <div class="panel cpu">
+    <div class="panel cpu" @click="toggle($event)" @mouseleave="close($event)">
       <h1 class="title">CPU</h1>
       <div class="extra">
         <a href="https://www.amd.com/en/products/cpu/amd-ryzen-5-3600"
@@ -8,7 +8,7 @@
         >
       </div>
     </div>
-    <div class="panel gpu">
+    <div class="panel gpu" @click="toggle($event)" @mouseleave="close($event)">
       <h1 class="title">GPU</h1>
       <div class="extra">
         <a
@@ -17,7 +17,7 @@
         >
       </div>
     </div>
-    <div class="panel mobo">
+    <div class="panel mobo" @click="toggle($event)" @mouseleave="close($event)">
       <h1 class="title">MOBO</h1>
       <div class="extra">
         <a href="https://www.gigabyte.com/Motherboard/B450M-S2H-rev-10#kf"
@@ -25,7 +25,7 @@
         >
       </div>
     </div>
-    <div class="panel ram">
+    <div class="panel ram" @click="toggle($event)" @mouseleave="close($event)">
       <h1 class="title">RAM</h1>
       <div class="extra">
         <a
@@ -34,7 +34,7 @@
         >
       </div>
     </div>
-    <div class="panel psu">
+    <div class="panel psu" @click="toggle($event)" @mouseleave="close($event)">
       <h1 class="title">PSU</h1>
       <div class="extra">
         <a href="https://www.silverstonetek.com/product.php?pid=676&area=en"
@@ -42,7 +42,11 @@
         >
       </div>
     </div>
-    <div class="panel audio">
+    <div
+      class="panel audio"
+      @click="toggle($event)"
+      @mouseleave="close($event)"
+    >
       <h1 class="title">AUDIO</h1>
       <div class="extra">
         <a
@@ -53,6 +57,37 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      whichPanel: "none"
+    };
+  },
+  methods: {
+    toggle(event) {
+      let currEl = event.target.className.split(" ")[1];
+
+      let currActive = document.getElementsByClassName("panelActive")[0];
+
+      if (currActive != undefined && currEl != this.whichPanel) {
+        currActive.classList.remove("panelActive");
+        this.whichPanel = "none";
+      }
+
+      if (this.whichPanel == "none" || currEl != this.whichPanel) {
+        event.target.classList.add("panelActive");
+        this.whichPanel = currEl;
+      }
+    },
+    close(event) {
+      event.target.classList.remove("panelActive");
+      this.whichPanel = "none";
+    }
+  }
+};
+</script>
 
 <style scoped>
 .gears {
@@ -75,20 +110,24 @@
   opacity: 50%;
 }
 
+.panelActive {
+  flex: 2;
+}
+
 .panel:hover {
   opacity: 100%;
 }
 
-.panel:active {
+/* .panel:active {
   flex: 2;
-}
+} */
 
 .extra {
   /* visibility: hidden; */
   display: none;
 }
 
-.panel:active > .extra {
+.panelActive > .extra {
   /* visibility: visible; */
   display: inline;
 }
