@@ -20,6 +20,6 @@ jobs:
         git init
         git remote add origin https://muazamkamal:${{ secrets.GH_TOKEN }}@github.com/muazamkamal/muazamkamal-dev.git
         git fetch
-        git reset origin/master
         git add -A
         git commit -m "Deploy from https://github.com/muazamkamal/muazamkamal/commit/$GITHUB_SHA"
+        git push origin master
