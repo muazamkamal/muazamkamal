@@ -16,11 +16,11 @@ jobs:
 
     - name: CNAME
       run: |
+        cd dist
         echo "${{ secrets.DEVURL }}" > CNAME
 
     - name: Deploy
       run: |
-        cd dist
         git init
         git config user.email "${{ secrets.EMAIL }}"
         git config user.name "${{ secrets.NAME }}"
