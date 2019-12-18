@@ -80,10 +80,23 @@ export default {
         event.target.classList.add("panelActive");
         this.whichPanel = currEl;
       }
+
+      event.target.addEventListener( 'transitionend',
+      () => {
+        event.target.children[1].style.display = "inline"
+      },
+      false)
     },
     close(event) {
       event.target.classList.remove("panelActive");
+      event.target.children[1].style.display = "none"
       this.whichPanel = "none";
+
+      event.target.addEventListener( 'transitionend',
+      () => {
+        event.target.children[1].style.display = "none"
+      },
+      false)
     }
   }
 };
@@ -108,10 +121,10 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.5;
-  transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
+  transition: all 0.45s ease-in-out;
+  -o-transition: all 0.45s ease-in-out;
+  -webkit-transition: all 0.45s ease-in-out;
+  -moz-transition: all 0.45s ease-in-out;
 }
 
 .panelActive {
@@ -124,10 +137,6 @@ export default {
 
 .extra {
   display: none;
-}
-
-.panelActive > .extra {
-  display: inline;
 }
 
 .cpu {
