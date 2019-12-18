@@ -108,6 +108,10 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.5;
+  transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
 }
 
 .panelActive {
