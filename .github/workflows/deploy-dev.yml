@@ -16,7 +16,7 @@ jobs:
 
     - name: CNAME
       run: |
-        echo "${{ DEVURL }}" > CNAME
+        echo "${{ secrets.DEVURL }}" > CNAME
 
     - name: Deploy
       run: |
