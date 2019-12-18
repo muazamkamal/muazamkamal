@@ -107,15 +107,15 @@ export default {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 .panelActive {
-  flex: 3;
+  flex: 2;
 }
 
 .panel:hover {
-  opacity: 100%;
+  opacity: 1;
 }
 
 /* .panel:active {
