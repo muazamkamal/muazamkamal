@@ -111,7 +111,7 @@ export default {
 }
 
 .panelActive {
-  flex: 2;
+  flex: 3;
 }
 
 .panel:hover {
