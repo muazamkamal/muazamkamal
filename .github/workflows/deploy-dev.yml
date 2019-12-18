@@ -14,6 +14,10 @@ jobs:
         npm install
         npm run build
 
+    - name: CNAME
+      run: |
+        echo "${{ DEVURL }}" > CNAME
+
     - name: Deploy
       run: |
         cd dist
@@ -21,8 +25,6 @@ jobs:
         git config user.email "${{ secrets.EMAIL }}"
         git config user.name "${{ secrets.NAME }}"
         git remote add origin https://muazamkamal:${{ secrets.GH_TOKEN }}@github.com/muazamkamal/muazamkamal-dev.git
-        git fetch
         git add -A
         git commit -m "Deploy from https://github.com/muazamkamal/muazamkamal/commit/$GITHUB_SHA"
-        git pull origin master --allow-unrelated-histories --no-commit
-        git push origin master
+        git push origin master -f
