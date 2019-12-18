@@ -1,6 +1,10 @@
 <template>
   <div class="gears">
-    <div class="panel cpu" @mouseenter="toggle($event)" @mouseleave="close($event)">
+    <div
+      class="panel cpu"
+      @mouseenter="toggle($event)"
+      @mouseleave="close($event)"
+    >
       <h1 class="title">CPU</h1>
       <div class="extra">
         <a href="https://www.amd.com/en/products/cpu/amd-ryzen-5-3600"
@@ -8,7 +12,11 @@
         >
       </div>
     </div>
-    <div class="panel gpu" @mouseenter="toggle($event)" @mouseleave="close($event)">
+    <div
+      class="panel gpu"
+      @mouseenter="toggle($event)"
+      @mouseleave="close($event)"
+    >
       <h1 class="title">GPU</h1>
       <div class="extra">
         <a
@@ -17,7 +25,11 @@
         >
       </div>
     </div>
-    <div class="panel mobo" @mouseenter="toggle($event)" @mouseleave="close($event)">
+    <div
+      class="panel mobo"
+      @mouseenter="toggle($event)"
+      @mouseleave="close($event)"
+    >
       <h1 class="title">MOBO</h1>
       <div class="extra">
         <a href="https://www.gigabyte.com/Motherboard/B450M-S2H-rev-10#kf"
@@ -25,7 +37,11 @@
         >
       </div>
     </div>
-    <div class="panel ram" @mouseenter="toggle($event)" @mouseleave="close($event)">
+    <div
+      class="panel ram"
+      @mouseenter="toggle($event)"
+      @mouseleave="close($event)"
+    >
       <h1 class="title">RAM</h1>
       <div class="extra">
         <a
@@ -34,7 +50,11 @@
         >
       </div>
     </div>
-    <div class="panel psu" @mouseenter="toggle($event)" @mouseleave="close($event)">
+    <div
+      class="panel psu"
+      @mouseenter="toggle($event)"
+      @mouseleave="close($event)"
+    >
       <h1 class="title">PSU</h1>
       <div class="extra">
         <a href="https://www.silverstonetek.com/product.php?pid=676&area=en"
@@ -81,22 +101,26 @@ export default {
         this.whichPanel = currEl;
       }
 
-      event.target.addEventListener( 'transitionend',
-      () => {
-        event.target.children[1].style.display = "inline"
-      },
-      false)
+      event.target.addEventListener(
+        "transitionend",
+        () => {
+          event.target.children[1].style.display = "inline";
+        },
+        false
+      );
     },
     close(event) {
       event.target.classList.remove("panelActive");
-      event.target.children[1].style.display = "none"
+      event.target.children[1].style.display = "none";
       this.whichPanel = "none";
 
-      event.target.addEventListener( 'transitionend',
-      () => {
-        event.target.children[1].style.display = "none"
-      },
-      false)
+      event.target.addEventListener(
+        "transitionend",
+        () => {
+          event.target.children[1].style.display = "none";
+        },
+        false
+      );
     }
   }
 };
