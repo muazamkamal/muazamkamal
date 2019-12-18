@@ -18,6 +18,8 @@ jobs:
       run: |
         cd dist
         git init
+        git config user.email "${{ secrets.EMAIL }}"
+        git config user.name "${{ secrets.NAME }}"
         git remote add origin https://muazamkamal:${{ secrets.GH_TOKEN }}@github.com/muazamkamal/muazamkamal-dev.git
         git fetch
         git add -A
