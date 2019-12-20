@@ -4,75 +4,66 @@
       class="panel cpu"
       @mouseenter="toggle($event)"
       @mouseleave="close($event)"
+      @click="linkTo(cpuLink)"
     >
       <h1 class="title">CPU</h1>
       <div class="extra">
-        <a href="https://www.amd.com/en/products/cpu/amd-ryzen-5-3600"
-          >AMD Ryzen™ 5 3600</a
-        >
+        <a :href="cpuLink">AMD Ryzen™ 5 3600</a>
       </div>
     </div>
     <div
       class="panel gpu"
       @mouseenter="toggle($event)"
       @mouseleave="close($event)"
+      @click="linkTo(gpuLink)"
     >
       <h1 class="title">GPU</h1>
       <div class="extra">
-        <a
-          href="http://www.galax.com/en/graphics-card/galax-geforce-rtx-2060-1click.html"
-          >GALAX GeForce® RTX 2060 (1-Click OC)</a
-        >
+        <a :href="gpuLink">GALAX GeForce® RTX 2060 (1-Click OC)</a>
       </div>
     </div>
     <div
       class="panel mobo"
       @mouseenter="toggle($event)"
       @mouseleave="close($event)"
+      @click="linkTo(moboLink)"
     >
       <h1 class="title">MOBO</h1>
       <div class="extra">
-        <a href="https://www.gigabyte.com/Motherboard/B450M-S2H-rev-10#kf"
-          >GIGABYTE B450M S2H (rev. 1.0)</a
-        >
+        <a :href="moboLink">GIGABYTE B450M S2H (rev. 1.0)</a>
       </div>
     </div>
     <div
       class="panel ram"
       @mouseenter="toggle($event)"
       @mouseleave="close($event)"
+      @click="linkTo(ramLink)"
     >
       <h1 class="title">RAM</h1>
       <div class="extra">
-        <a
-          href="http://www.galax.com/en/ram/gamer-ram/galax-gamer2-plus-3000-8g.html"
-          >2 x GALAX GAMER II PLUS DDR4-3000 8G</a
-        >
+        <a :href="ramLink">2 x GALAX GAMER II PLUS DDR4-3000 8G</a>
       </div>
     </div>
     <div
       class="panel psu"
       @mouseenter="toggle($event)"
       @mouseleave="close($event)"
+      @click="linkTo(psuLink)"
     >
       <h1 class="title">PSU</h1>
       <div class="extra">
-        <a href="https://www.silverstonetek.com/product.php?pid=676&area=en"
-          >SilverStone ST60F-ES230 600W</a
-        >
+        <a :href="psuLink">SilverStone ST60F-ES230 600W</a>
       </div>
     </div>
     <div
       class="panel audio"
       @mouseenter="toggle($event)"
       @mouseleave="close($event)"
+      @click="linkTo(audioLink)"
     >
       <h1 class="title">AUDIO</h1>
       <div class="extra">
-        <a
-          href="https://focusrite.com/usb-audio-interface/scarlett/scarlett-2i2"
-          >Focusrite Scarlett 2i2 2nd Gen</a
-        >
+        <a :href="audioLink">Focusrite Scarlett 2i2 2nd Gen</a>
       </div>
     </div>
   </div>
@@ -82,6 +73,15 @@
 export default {
   data() {
     return {
+      cpuLink: "https://www.amd.com/en/products/cpu/amd-ryzen-5-3600",
+      gpuLink:
+        "http://www.galax.com/en/graphics-card/galax-geforce-rtx-2060-1click.html",
+      moboLink: "https://www.gigabyte.com/Motherboard/B450M-S2H-rev-10#kf",
+      ramLink:
+        "http://www.galax.com/en/ram/gamer-ram/galax-gamer2-plus-3000-8g.html",
+      psuLink: "https://www.silverstonetek.com/product.php?pid=676&area=en",
+      audioLink:
+        "https://focusrite.com/usb-audio-interface/scarlett/scarlett-2i2",
       whichPanel: "none"
     };
   },
@@ -121,6 +121,9 @@ export default {
         },
         false
       );
+    },
+    linkTo(link) {
+      location.href = link;
     }
   }
 };
