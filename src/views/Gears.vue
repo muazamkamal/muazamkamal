@@ -56,6 +56,17 @@
       </div>
     </div>
     <div
+      class="panel monitor"
+      @mouseenter="toggle($event)"
+      @mouseleave="close($event)"
+      @click="linkTo(monitorLink)"
+    >
+      <h1 class="title">MONITOR</h1>
+      <div class="extra">
+        <a :href="monitorLink">BenQ XL2430T</a>
+      </div>
+    </div>
+    <div
       class="panel audio"
       @mouseenter="toggle($event)"
       @mouseleave="close($event)"
@@ -63,7 +74,31 @@
     >
       <h1 class="title">AUDIO</h1>
       <div class="extra">
-        <a :href="audioLink">Focusrite Scarlett 2i2 2nd Gen</a>
+        <a :href="audioLink">Focusrite Scarlett 2i2 Studio (2nd Gen)</a>
+        <br />
+        <a :href="earLink">Massdrop X NuForce EDC In-Ear Monitors</a>
+      </div>
+    </div>
+    <div
+      class="panel keyboard"
+      @mouseenter="toggle($event)"
+      @mouseleave="close($event)"
+      @click="linkTo(keyLink)"
+    >
+      <h1 class="title">KEYBOARD</h1>
+      <div class="extra">
+        <a :href="keyLink">Ducky One TKL (Cherry Brown)</a>
+      </div>
+    </div>
+    <div
+      class="panel mouse"
+      @mouseenter="toggle($event)"
+      @mouseleave="close($event)"
+      @click="linkTo(mouseLink)"
+    >
+      <h1 class="title">MOUSE</h1>
+      <div class="extra">
+        <a :href="mouseLink">Steelseries Sensei 310</a>
       </div>
     </div>
   </div>
@@ -80,8 +115,14 @@ export default {
       ramLink:
         "http://www.galax.com/en/ram/gamer-ram/galax-gamer2-plus-3000-8g.html",
       psuLink: "https://www.silverstonetek.com/product.php?pid=676&area=en",
+      monitorLink:
+        "https://www.amazon.com/BenQ-XL2430T-Gaming-Monitor-Response/dp/B00M8E0K06",
       audioLink:
-        "https://focusrite.com/usb-audio-interface/scarlett/scarlett-2i2",
+        "https://focusrite.com/en/usb-audio-interface/scarlett/scarlett-2i2-studio",
+      earLink: "https://drop.com/buy/massdrop-x-nuforce-edc-in-ear-monitors",
+      keyLink:
+        "https://www.duckychannel.com.tw/en/Ducky-One-Single-backlit-TKL",
+      mouseLink: "https://steelseries.com/gaming-mice/sensei-310",
       whichPanel: "none"
     };
   },
@@ -196,9 +237,25 @@ export default {
   background-position: 70% 30%;
 }
 
+.monitor {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/gears/monitor.png");
+}
+
 .audio {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../assets/gears/2i2.png");
   background-position: 45% 55%;
+}
+
+.keyboard {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/gears/keyboard.png");
+}
+
+.mouse {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/gears/mouse.png");
+  background-position: 60% 40%;
 }
 </style>
