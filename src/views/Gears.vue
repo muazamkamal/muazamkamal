@@ -258,4 +258,14 @@ export default {
     url("../assets/gears/mouse.png");
   background-position: 60% 40%;
 }
+
+@media only screen and (max-width: 600px) {
+  .gears {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 0.9em;
+  }
+}
 </style>
