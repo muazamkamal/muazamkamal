@@ -1,0 +1,31 @@
+name: Build and Deploy Development
+on: 
+  push:
+    branches:
+      - dev
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+    - name: Build
+      run: |
+        npm install
+        npm run build
+
+    - name: CNAME
+      run: |
+        cd dist
+        echo "${{ secrets.DEVURL }}" > CNAME
+
+    - name: Deploy
+      run: |
+        cd dist
+        git init
+        git config user.email "${{ secrets.EMAIL }}"
+        git config user.name "${{ secrets.NAME }}"
+        git remote add origin https://muazamkamal:${{ secrets.GH_TOKEN }}@github.com/muazamkamal/muazamkamal-dev.git
+        git add -A
+        git commit -m "Deploy from https://github.com/muazamkamal/muazamkamal/commit/$GITHUB_SHA"
+        git push origin master -f
