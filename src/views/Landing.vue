@@ -25,14 +25,6 @@ import Chibi from "@/components/Chibi.vue";
 
 export default {
   name: "Landing",
-  metaInfo: {
-    meta: [
-      {
-        name: "google-site-verification",
-        content: "9qyzWcHT1Q9PdJ9A-Mzv-c-7hyYAgb858cjIq-aQmDY"
-      }
-    ]
-  },
   components: {
     Center,
     Chibi
