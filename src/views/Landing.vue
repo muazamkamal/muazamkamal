@@ -24,6 +24,78 @@ import Center from "@/components/Center.vue";
 import Chibi from "@/components/Chibi.vue";
 
 export default {
+  metaInfo: {
+    title: "Muazam Kamal",
+    meta: [
+      // Primary meta
+      {
+        name: "title",
+        content: "Muazam Kamal"
+      },
+      {
+        name: "description",
+        content: "enthusiasts."
+      },
+      // Open Graph / Facebook
+      {
+        property: "og:type",
+        content: "website"
+      },
+      {
+        property: "og:url",
+        content: "https://muazamkamal.com/"
+      },
+      {
+        property: "og:title",
+        content: "Muazam Kamal"
+      },
+      {
+        property: "og:site_name",
+        content: "Muazam Kamal"
+      },
+      {
+        property: "og:description",
+        content: "enthusiasts."
+      },
+      {
+        property: "og:image",
+        content: "https://muazamkamal.com/chibi.png"
+      },
+      {
+        property: "og:image:width",
+        content: "1500"
+      },
+      {
+        property: "og:image:height",
+        content: "1500"
+      },
+      // Twitter
+      {
+        property: "twitter:card",
+        content: "summary_large_image"
+      },
+      {
+        property: "twitter:url",
+        content: "https://muazamkamal.com/"
+      },
+      {
+        property: "twitter:title",
+        content: "Muazam Kamal"
+      },
+      {
+        property: "twitter:description",
+        content: "enthusiasts."
+      },
+      {
+        property: "twitter:image",
+        content: "https://muazamkamal.com/chibi.png"
+      },
+      {
+        property: "twitter:creator",
+        content: "@muazamkamal"
+      }
+    ]
+  },
   name: "Landing",
   components: {
     Center,
