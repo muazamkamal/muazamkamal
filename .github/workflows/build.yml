@@ -11,5 +11,5 @@ jobs:
     - uses: actions/checkout@master
     - name: npm install and build
       run: |
-        npm install
+        npm install --only=production
         npm run build
