@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@master
     - name: Build
       run: |
-        npm install --only=production
+        npm install
         npm run build
 
     - name: CNAME
