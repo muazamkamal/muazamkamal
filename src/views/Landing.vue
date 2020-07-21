@@ -1,5 +1,18 @@
 <template>
   <div class="landing">
+    <nav>
+      <Burger></Burger>
+    </nav>
+
+    <Center>
+      <Sidebar>
+        <ul class="sidebar-panel-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/gears">Gears</a></li>
+        </ul>
+      </Sidebar>
+    </Center>
+
     <Center>
       <component :is="child_component"></component>
       <div class="sub">
@@ -22,6 +35,8 @@
 <script>
 import Center from "@/components/Center.vue";
 import Chibi from "@/components/Chibi.vue";
+import Burger from "@/components/menu/Burger.vue";
+import Sidebar from "@/components/menu/Sidebar.vue";
 
 export default {
   metaInfo: {
@@ -99,7 +114,9 @@ export default {
   name: "Landing",
   components: {
     Center,
-    Chibi
+    Chibi,
+    Burger,
+    Sidebar
   },
   data() {
     return {
@@ -163,5 +180,33 @@ a:active {
   .email {
     font-size: 1em;
   }
+}
+
+nav {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+ul.sidebar-panel-nav {
+  list-style-type: none;
+  top: 50%;
+  padding-left: 0;
+}
+
+ul.sidebar-panel-nav > li {
+  font-size: 3em;
+  font-weight: 400;
+  margin: 0.5em 0;
+}
+
+ul.sidebar-panel-nav > li > a {
+  color: white;
+  height: 80px;
+  line-height: 80px;
+  display: block;
+}
+
+ul.sidebar-panel-nav > li > a:hover {
+  color: rgb(98, 98, 98);
 }
 </style>
