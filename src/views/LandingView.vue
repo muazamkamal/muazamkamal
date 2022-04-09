@@ -1,20 +1,20 @@
 <template>
   <div class="landing">
     <nav>
-      <Burger></Burger>
+      <BurgerMenu />
     </nav>
 
-    <Center>
-      <Sidebar>
-        <ul class="sidebar-panel-nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="/gears">Gears</a></li>
-        </ul>
-      </Sidebar>
-    </Center>
+    <SidebarMenu>
+      <ul class="sidebar-panel-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/gears">Gears</a></li>
+      </ul>
+    </SidebarMenu>
 
-    <Center>
-      <component :is="child_component"></component>
+    <main>
+      <div id="chibi">
+        <component :is="child_component" />
+      </div>
       <div class="sub">
         <div class="links">
           <a href="https://instagram.com/muazamkamal" class="ig">⌨</a>
@@ -28,102 +28,100 @@
           >contact@muazamkamal.com</a
         >
       </div>
-    </Center>
+    </main>
   </div>
 </template>
 
 <script>
-import Center from "@/components/Center.vue";
-import Chibi from "@/components/Chibi.vue";
-import Burger from "@/components/menu/Burger.vue";
-import Sidebar from "@/components/menu/Sidebar.vue";
+import ChibiComp from '@/components/ChibiComp.vue'
+import BurgerMenu from '@/components/menu/BurgerMenu.vue'
+import SidebarMenu from '@/components/menu/SidebarMenu.vue'
 
 export default {
   metaInfo: {
-    title: "Muazam Kamal",
+    title: 'Muazam Kamal',
     meta: [
       // Primary meta
       {
-        name: "title",
-        content: "Muazam Kamal"
+        name: 'title',
+        content: 'Muazam Kamal',
       },
       {
-        name: "description",
-        content: "enthusiasts."
+        name: 'description',
+        content: 'enthusiasts.',
       },
       // Open Graph / Facebook
       {
-        property: "og:type",
-        content: "website"
+        property: 'og:type',
+        content: 'website',
       },
       {
-        property: "og:url",
-        content: "https://muazamkamal.com/"
+        property: 'og:url',
+        content: 'https://muazamkamal.com/',
       },
       {
-        property: "og:title",
-        content: "Muazam Kamal"
+        property: 'og:title',
+        content: 'Muazam Kamal',
       },
       {
-        property: "og:site_name",
-        content: "Muazam Kamal"
+        property: 'og:site_name',
+        content: 'Muazam Kamal',
       },
       {
-        property: "og:description",
-        content: "enthusiasts."
+        property: 'og:description',
+        content: 'enthusiasts.',
       },
       {
-        property: "og:image",
-        content: "https://muazamkamal.com/chibi.png"
+        property: 'og:image',
+        content: 'https://muazamkamal.com/chibi.png',
       },
       {
-        property: "og:image:width",
-        content: "1500"
+        property: 'og:image:width',
+        content: '1500',
       },
       {
-        property: "og:image:height",
-        content: "1500"
+        property: 'og:image:height',
+        content: '1500',
       },
       // Twitter
       {
-        property: "twitter:card",
-        content: "summary_large_image"
+        property: 'twitter:card',
+        content: 'summary_large_image',
       },
       {
-        property: "twitter:url",
-        content: "https://muazamkamal.com/"
+        property: 'twitter:url',
+        content: 'https://muazamkamal.com/',
       },
       {
-        property: "twitter:title",
-        content: "Muazam Kamal"
+        property: 'twitter:title',
+        content: 'Muazam Kamal',
       },
       {
-        property: "twitter:description",
-        content: "enthusiasts."
+        property: 'twitter:description',
+        content: 'enthusiasts.',
       },
       {
-        property: "twitter:image",
-        content: "https://muazamkamal.com/chibi.png"
+        property: 'twitter:image',
+        content: 'https://muazamkamal.com/chibi.png',
       },
       {
-        property: "twitter:creator",
-        content: "@muazamkamal"
-      }
-    ]
+        property: 'twitter:creator',
+        content: '@muazamkamal',
+      },
+    ],
   },
-  name: "Landing",
+  name: 'LandingView',
   components: {
-    Center,
-    Chibi,
-    Burger,
-    Sidebar
+    ChibiComp,
+    BurgerMenu,
+    SidebarMenu,
   },
   data() {
     return {
-      child_component: "Chibi"
-    };
-  }
-};
+      child_component: 'ChibiComp',
+    }
+  },
+}
 </script>
 
 <style scoped>
@@ -139,14 +137,23 @@ a:active {
   color: rgb(14, 124, 89);
 }
 
-.links {
-  font-size: 32px;
-  letter-spacing: 0.4em;
+.landing {
+  height: 100%;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .links {
   display: flex;
   justify-content: center;
+  font-size: 32px;
+  letter-spacing: 0.4em;
 }
 
 .links a:hover,
@@ -166,6 +173,11 @@ a:active {
   font-size: 24px;
   font-style: italic;
   font-weight: 300;
+  letter-spacing: 1px;
+}
+
+#chibi {
+  width: clamp(200px, 40%, 500px);
 }
 
 @media only screen and (max-width: 600px) {

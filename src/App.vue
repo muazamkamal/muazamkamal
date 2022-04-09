@@ -6,7 +6,7 @@
 
 <style>
 /* @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed"); */
-@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 html {
   margin: 0;
@@ -21,6 +21,7 @@ html {
 
 body {
   margin: 0;
+  height: 100%;
 }
 
 a,
@@ -36,11 +37,12 @@ a:active {
 }
 
 #app {
-  font-family: "Lato Thin", sans-serif;
+  font-family: 'Lato Thin', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   letter-spacing: 5px;
   line-height: 2em;
+  height: 100%;
 }
 </style>
