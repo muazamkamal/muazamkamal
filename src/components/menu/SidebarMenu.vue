@@ -2,27 +2,27 @@
   <div class="sidebar">
     <transition name="open">
       <div
+        v-if="$store.state.isNavOpen"
         class="sidebar-backdrop"
         @click="toggleNav"
-        v-if="$store.state.isNavOpen"
-      ></div>
+      />
     </transition>
     <transition name="slide">
       <div v-if="$store.state.isNavOpen" class="sidebar-panel">
-        <slot></slot>
+        <slot />
       </div>
     </transition>
   </div>
 </template>
 <script>
-import { mapMutations } from "vuex";
+import { mapMutations } from 'vuex'
 
 export default {
   data: () => ({
-    isPanelOpen: true
+    isPanelOpen: true,
   }),
-  methods: mapMutations(["toggleNav"])
-};
+  methods: mapMutations(['toggleNav']),
+}
 </script>
 <style>
 .slide-enter-active,

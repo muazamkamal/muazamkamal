@@ -6,19 +6,19 @@
   >
     <slot>
       <button type="button" class="burger-button" title="Menu">
-        <span class="burger-bar burger-bar--1"></span>
-        <span class="burger-bar burger-bar--2"></span>
-        <span class="burger-bar burger-bar--3"></span>
+        <span class="burger-bar burger-bar--1" />
+        <span class="burger-bar burger-bar--2" />
+        <span class="burger-bar burger-bar--3" />
       </button>
     </slot>
   </div>
 </template>
 <script>
-import { mapMutations } from "vuex";
+import { mapMutations } from 'vuex'
 
 export default {
-  methods: mapMutations(["toggleNav"])
-};
+  methods: mapMutations(['toggleNav']),
+}
 </script>
 <style>
 .hidden {

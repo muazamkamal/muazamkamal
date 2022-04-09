@@ -3,7 +3,7 @@
     <div class="outer">
       <div class="middle">
         <div class="inner">
-          <slot></slot>
+          <slot />
         </div>
       </div>
     </div>
@@ -12,8 +12,8 @@
 
 <script>
 export default {
-  name: "Center"
-};
+  name: 'CenterComp',
+}
 </script>
 
 <style>

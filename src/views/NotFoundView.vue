@@ -1,20 +1,20 @@
 <template>
   <div class="notfound">
-    <Center>
+    <CenterComp>
       <h1>The page you're looking for does not exist.</h1>
-    </Center>
+    </CenterComp>
   </div>
 </template>
 
 <script>
-import Center from "@/components/Center.vue";
+import CenterComp from '@/components/CenterComp.vue'
 
 export default {
-  name: "NotFound",
+  name: 'NotFoundView',
   components: {
-    Center
-  }
-};
+    CenterComp,
+  },
+}
 </script>
 
 <style scoped>
