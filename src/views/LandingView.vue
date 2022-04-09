@@ -166,14 +166,14 @@ main {
   font-size: 1.75em;
   color: rgb(98, 98, 98);
   letter-spacing: 0.3em;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 .email {
   font-size: 24px;
   font-style: italic;
-  font-weight: 300;
-  letter-spacing: 1px;
+  font-weight: 500;
+  letter-spacing: 2px;
 }
 
 #chibi {
