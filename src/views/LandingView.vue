@@ -1,20 +1,20 @@
 <template>
   <div class="landing">
     <nav>
-      <BurgerComp />
+      <BurgerMenu />
     </nav>
 
-    <CenterComp>
-      <Sidebar>
-        <ul class="sidebar-panel-nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="/gears">Gears</a></li>
-        </ul>
-      </Sidebar>
-    </CenterComp>
+    <SidebarMenu>
+      <ul class="sidebar-panel-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/gears">Gears</a></li>
+      </ul>
+    </SidebarMenu>
 
-    <CenterComp>
-      <component :is="child_component" />
+    <main>
+      <div id="chibi">
+        <component :is="child_component" />
+      </div>
       <div class="sub">
         <div class="links">
           <a href="https://instagram.com/muazamkamal" class="ig">⌨</a>
@@ -28,12 +28,11 @@
           >contact@muazamkamal.com</a
         >
       </div>
-    </CenterComp>
+    </main>
   </div>
 </template>
 
 <script>
-import CenterComp from '@/components/CenterComp.vue'
 import ChibiComp from '@/components/ChibiComp.vue'
 import BurgerMenu from '@/components/menu/BurgerMenu.vue'
 import SidebarMenu from '@/components/menu/SidebarMenu.vue'
@@ -116,7 +115,6 @@ export default {
     ChibiComp,
     BurgerMenu,
     SidebarMenu,
-    CenterComp,
   },
   data() {
     return {
@@ -139,14 +137,23 @@ a:active {
   color: rgb(14, 124, 89);
 }
 
-.links {
-  font-size: 32px;
-  letter-spacing: 0.4em;
+.landing {
+  height: 100%;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .links {
   display: flex;
-  justify-content: center-comp;
+  justify-content: center;
+  font-size: 32px;
+  letter-spacing: 0.4em;
 }
 
 .links a:hover,
@@ -166,6 +173,11 @@ a:active {
   font-size: 24px;
   font-style: italic;
   font-weight: 300;
+  letter-spacing: 1px;
+}
+
+#chibi {
+  width: clamp(200px, 40%, 500px);
 }
 
 @media only screen and (max-width: 600px) {

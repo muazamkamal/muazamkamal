@@ -21,6 +21,7 @@ html {
 
 body {
   margin: 0;
+  height: 100%;
 }
 
 a,
@@ -42,5 +43,6 @@ a:active {
   text-align: center;
   letter-spacing: 5px;
   line-height: 2em;
+  height: 100%;
 }
 </style>
