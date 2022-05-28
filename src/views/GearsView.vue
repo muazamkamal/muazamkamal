@@ -18,7 +18,7 @@
       <div class="extra">
         <div v-for="detail in gear.details" :key="detail.link">
           <template v-if="detail.link"
-            ><a :href="detail.link">{{ detail.name }}</a>
+            ><a :href="detail.link" target="_blank">{{ detail.name }}</a>
           </template>
           <template v-else>
             <span>{{ detail.name }}</span>
@@ -83,12 +83,16 @@ export default {
           type: 'audio',
           details: [
             {
-              name: 'NuForce uDAC-3 DAC/AMP Combo',
-              link: 'https://drop.com/buy/udac-3-amp-dac',
+              name: 'Behringer U-Phoria UMC202HD',
+              link: 'https://www.behringer.com/product.html?modelCode=P0BJZ',
             },
             {
-              name: 'Massdrop X NuForce EDC In-Ear Monitors',
-              link: 'https://drop.com/buy/massdrop-x-nuforce-edc-in-ear-monitors',
+              name: 'Audio-Technica AT2020',
+              link: 'https://www.audio-technica.com/en-au/at2020',
+            },
+            {
+              name: 'Sennheiser HD 560S',
+              link: 'https://www.sennheiser-hearing.com/en-AU/p/hd-560s/',
             },
           ],
         },
