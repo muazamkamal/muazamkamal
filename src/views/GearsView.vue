@@ -18,7 +18,7 @@
       <div class="extra">
         <div v-for="detail in gear.details" :key="detail.link">
           <template v-if="detail.link"
-            ><a :href="detail.link">{{ detail.name }}</a>
+            ><a :href="detail.link" target="_blank">{{ detail.name }}</a>
           </template>
           <template v-else>
             <span>{{ detail.name }}</span>
@@ -91,8 +91,8 @@ export default {
               link: 'https://www.audio-technica.com/en-au/at2020',
             },
             {
-              name: 'Massdrop X NuForce EDC In-Ear Monitors',
-              link: 'https://drop.com/buy/massdrop-x-nuforce-edc-in-ear-monitors',
+              name: 'Sennheiser HD 560S',
+              link: 'https://www.sennheiser-hearing.com/en-AU/p/hd-560s/',
             },
           ],
         },
