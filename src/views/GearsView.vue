@@ -17,8 +17,10 @@
       <h1 class="title">{{ gear.type }}</h1>
       <div class="extra">
         <div v-for="detail in gear.details" :key="detail.link">
-          <template v-if="detail.link"
-            ><a :href="detail.link" target="_blank">{{ detail.name }}</a>
+          <template v-if="detail.link">
+            <a :href="detail.link" target="_blank">
+              <span>{{ detail.name }}</span>
+            </a>
           </template>
           <template v-else>
             <span>{{ detail.name }}</span>
@@ -65,8 +67,8 @@ export default {
           type: 'ram',
           details: [
             {
-              name: '2 x Crucial Ballistix 8GB DDR4-3200',
-              link: 'https://www.crucial.com/memory/ddr4/bl2k8g32c16u4b',
+              name: '2 x Patriot Viper Steel RGB 16GB DDR4-3600',
+              link: 'https://viper.patriotmemory.com/products/viper-steel-rgb-ddr4-performance-ram',
             },
           ],
         },
@@ -100,7 +102,8 @@ export default {
           type: 'keyboard',
           details: [
             {
-              name: 'Obinslab Anne Pro 1 (Gateron Red)',
+              name: 'GamaKay LK67 (Black)',
+              link: 'https://gamakay.com/products/gamakay-lk67-65-triple-mod-keyboard-customized-kit-rgb-hot-swappable-3pin-5pin-switch-65-programmable-triple-mode-wired-bluetooth-5-0-2-4ghz-keyboard-kit-nkro-pcb-mounting-plate-case-with-rotate-button-custom-keyboard',
             },
           ],
         },
@@ -108,8 +111,8 @@ export default {
           type: 'mouse',
           details: [
             {
-              name: 'Steelseries Sensei 310',
-              link: 'https://steelseries.com/gaming-mice/sensei-310',
+              name: 'Razer Viper Ultimate Wireless',
+              link: 'https://www.razer.com/gaming-mice/razer-viper-ultimate',
             },
           ],
         },
@@ -193,10 +196,6 @@ export default {
   background-position: 55% 50%;
 }
 
-.ram {
-  background-position: 45% 50%;
-}
-
 .monitor {
   background-position: 50% 50%;
 }
@@ -206,11 +205,11 @@ export default {
 }
 
 .keyboard {
-  background-position: 50% 50%;
+  background-position: 45% 50%;
 }
 
 .mouse {
-  background-position: 60% 40%;
+  background-position: 50% 60%;
 }
 
 @media only screen and (max-width: 600px) {
