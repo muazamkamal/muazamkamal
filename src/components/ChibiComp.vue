@@ -8,8 +8,8 @@
 
 <script>
 export default {
-  name: "Chibi"
-};
+  name: 'ChibiComp',
+}
 </script>
 
 <style scoped>
