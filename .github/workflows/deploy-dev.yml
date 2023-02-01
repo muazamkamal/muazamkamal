@@ -25,7 +25,7 @@ jobs:
         git init
         git config user.email "${{ secrets.EMAIL }}"
         git config user.name "${{ secrets.NAME }}"
-        git remote add origin https://muazamkamal:${{ secrets.GITHUB_TOKEN }}@github.com/muazamkamal/muazamkamal-dev.git
+        git remote add origin https://muazamkamal:${{ secrets.GHRW_TOKEN }}@github.com/muazamkamal/muazamkamal-dev.git
         git add -A
         git commit -m "Deploy from https://github.com/muazamkamal/muazamkamal/commit/$GITHUB_SHA"
         git push origin master -f
